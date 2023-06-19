@@ -33,6 +33,16 @@ function SignInForm() {
                     />
                 </Form.Group>
 
+                <Form.Group controlId="password">
+                    <Form.Label className="d-none">Password</Form.Label>
+                    <Form.Control 
+                        type="password" 
+                        placeholder="Password" 
+                        name="password"
+                        className={styles.Input}
+                    />
+                </Form.Group>
+
         </Container>
         <Container className={`mt-3 ${appStyles.Content}`}>
           <Link className={styles.Link} to="/signup">
