@@ -19,6 +19,11 @@ function App() {
       console.log(err);
     }
   };
+
+  useEffect(() => {
+    handleMount();
+  }, []);
+  
   return (
     <div className={styles.App}>
       <NavBar />
