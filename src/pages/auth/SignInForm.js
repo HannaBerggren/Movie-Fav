@@ -15,7 +15,11 @@ import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
 function SignInForm() {
-//   Add your component logic here
+    const [signInData, setSignInData] = useState({
+        username: "",
+        password: "",
+      });
+      const { username, password } = signInData;
 
   return (
     <Row className={styles.Row}>
