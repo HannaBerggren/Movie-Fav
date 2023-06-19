@@ -21,6 +21,9 @@ function SignInForm() {
       });
       const { username, password } = signInData;
 
+      const handleSubmit = async (event) => {
+        event.preventDefault();
+
       const handleChange = (event) => {
         setSignInData({
           ...signInData,
@@ -41,6 +44,8 @@ function SignInForm() {
                         placeholder="Username"
                         name="username" 
                         className={styles.Input}
+                        value={username}
+                        onChange={handleChange}
                     />
                 </Form.Group>
 
@@ -51,6 +56,8 @@ function SignInForm() {
                         placeholder="Password" 
                         name="password"
                         className={styles.Input}
+                        value={password}
+                        onChange={handleChange}
                     />
                 </Form.Group>
                 <Button 
