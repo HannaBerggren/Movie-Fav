@@ -42,7 +42,13 @@ function SignInForm() {
                         className={styles.Input}
                     />
                 </Form.Group>
-
+                <Button 
+                    className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
+                    type="submit"
+                >
+                    Sign In
+                </Button>
+            </Form>
         </Container>
         <Container className={`mt-3 ${appStyles.Content}`}>
           <Link className={styles.Link} to="/signup">
