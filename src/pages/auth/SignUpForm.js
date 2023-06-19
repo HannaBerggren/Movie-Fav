@@ -5,7 +5,15 @@ import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
-import { Form, Button, Image, Col, Row, Container } from "react-bootstrap";
+import { 
+  Form, 
+  Button, 
+  Image, 
+  Col, 
+  Row, 
+  Container 
+} from "react-bootstrap"; 
+import axios from "axios";
 
 const SignUpForm = () => {
   const [signUpData, setSignUpData] = useState({
@@ -21,6 +29,14 @@ const SignUpForm = () => {
       [event.target.name]: event.target.value,
     });
   };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axios.post("/dj-rest-auth/registration/", signUpData);
+    } catch (err) {
+
+    } 
 
   return (
     <Row className={styles.Row}>
