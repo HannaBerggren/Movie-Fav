@@ -23,6 +23,12 @@ function SignInForm() {
 
       const handleSubmit = async (event) => {
         event.preventDefault();
+        try {
+            await axios.post("/dj-rest-auth/login/", signInData);
+            history.push("/");
+          } catch (err) {
+          }
+        };
 
       const handleChange = (event) => {
         setSignInData({
