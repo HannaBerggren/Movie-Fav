@@ -28,6 +28,7 @@ const SignUpForm = () => {
                 type="text"
                 placeholder="Username"
                 name="username"
+                value={username}
               />
             </Form.Group>
 
@@ -38,6 +39,7 @@ const SignUpForm = () => {
                 type="password"
                 placeholder="Password"
                 name="password1"
+                value={password1}
               />
             </Form.Group>
 
@@ -48,6 +50,7 @@ const SignUpForm = () => {
                 type="password"
                 placeholder="Confirm password"
                 name="password2"
+                value={password2}
               />
             </Form.Group>
 
