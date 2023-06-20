@@ -13,6 +13,7 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
 import { Image } from "react-bootstrap";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function PostCreateForm() {
   const [errors, setErrors] = useState({});
@@ -25,6 +26,7 @@ function PostCreateForm() {
   const { title, content, image } = postData;
 
   const imageInput = useRef(null);
+  const history = useHistory();
 
 
   const handleChange = (event) => {
@@ -43,6 +45,14 @@ function PostCreateForm() {
       });
     }
   };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+
+    formData.append("title", title);
+    formData.append("content", content);
+    formData.append("image", imageInput.current.files[0]);
 
   const textFields = (
     <div className="text-center">
