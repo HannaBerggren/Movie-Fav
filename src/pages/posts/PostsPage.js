@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
@@ -10,6 +10,7 @@ import styles from "../../styles/PostsPage.module.css";
 
 function PostsPage({ message, filter = "" }) {
     const [posts, setPosts] = useState({ results: [] });
+    const [hasLoaded, setHasLoaded] = useState(false);
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
