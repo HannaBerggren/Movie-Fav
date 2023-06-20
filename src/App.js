@@ -7,6 +7,7 @@ import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
+import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 
@@ -20,10 +21,31 @@ function App() {
         <NavBar />
         <Container className={styles.Main}>
           <Switch>
-            <Route exact
+            <Route 
+              exact
               path="/" 
               render={() => (
                 <PostsPage message="Sorry, no results are found, adjust the keyword." />
+              )}
+            />
+            <Route 
+              exact
+              path="/feed" 
+              render={() => (
+                <PostsPage 
+                  message="Sorry, no results are found, adjust the keyword or follow a user"
+                  filter={`owner__followed__owner__profile=${profile_id}&`}
+                />
+              )}
+            />
+              <Route
+                exact
+                path="/liked"
+                render={() => (
+                  <PostsPage
+                  message="Sorry, no results found, adjust the search keyword or like a post."
+                  filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
+                />
               )}
             />
             <Route exact path="/signin" render={() => <SignInForm />} />
