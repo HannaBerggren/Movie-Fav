@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -23,6 +23,8 @@ function PostCreateForm() {
     image: "",
   });
   const { title, content, image } = postData;
+
+  const imageInput = useRef(null);
 
 
   const handleChange = (event) => {
@@ -115,6 +117,7 @@ function PostCreateForm() {
                 id="image-upload"
                 accept="image/*"
                 onChange={handleChangeImage}
+                ref={imageInput}
               />
             </Form.Group>
             <div className="d-md-none">{textFields}</div>
