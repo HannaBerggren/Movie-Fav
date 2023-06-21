@@ -25,6 +25,7 @@ const Comment = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+  const [showEditForm, setShowEditForm] = useState(false);
 
   const handleDelete = async () => {
     try {
