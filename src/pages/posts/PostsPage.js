@@ -20,6 +20,8 @@ function PostsPage({ message, filter = "" }) {
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
 
+  const [query, setQuery] = useState("");
+
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -44,7 +46,9 @@ function PostsPage({ message, filter = "" }) {
           className={styles.SearchBar}
           onSubmit={(event) => event.preventDefault()}
         >
-          <Form.Control 
+          <Form.Control
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
             type="text" 
             className="mr-sm-2"
             placeholder="Search your favorite posts" 
