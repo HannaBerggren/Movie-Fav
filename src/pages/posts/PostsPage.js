@@ -15,6 +15,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 
 import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -33,7 +34,7 @@ function PostsPage({ message, filter = "" }) {
         console.log(err);
       }
     };
-    
+
     setHasLoaded(false);
     const timer = setTimeout(() => {
       fetchPosts();
@@ -49,16 +50,16 @@ function PostsPage({ message, filter = "" }) {
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Popular profiles mobile</p>
         <i className={`fas fa-search ${styles.SearchIcon}`} />
-        <Form 
+        <Form
           className={styles.SearchBar}
           onSubmit={(event) => event.preventDefault()}
         >
           <Form.Control
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            type="text" 
+            type="text"
             className="mr-sm-2"
-            placeholder="Search your favorite posts" 
+            placeholder="Search your favorite posts"
           />
         </Form>
 
@@ -72,13 +73,19 @@ function PostsPage({ message, filter = "" }) {
                 dataLength={posts.results.length}
                 loader={<Asset spinner />}
                 hasMore={!!posts.next}
-                next={() => {}}
+                next={() => fetchMoreData(posts, setPosts)}
               />
-        ) : (
-          <Container className={appStyles.Content}>
-            <Asset spinner />
-          </Container>
-        )}
+          ) : (
+            <Container className={appStyles.Content}>
+              <Asset spinner />
+            </Container>
+          )}
+        </>
+      ) : (
+        <Container className={appStyles.Content}>
+          <Asset spinner />
+        </Container>
+      )}
       </Col>
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
         <p>Popular profiles for desktop</p>
