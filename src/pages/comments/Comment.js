@@ -2,6 +2,7 @@ import React from "react";
 import { Media } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
+import { MoreDropdown } from "../../components/MoreDropdown";
 import styles from "../../styles/Comment.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
@@ -24,6 +25,9 @@ const Comment = (props) => {
           <span className={styles.Date}>{updated_at}</span>
           <p>{content}</p>
         </Media.Body>
+        {is_owner && (
+          <MoreDropdown handleEdit={() => {}} handleDelete={() => {}} />
+        )}
       </Media>
     </div>
   );
