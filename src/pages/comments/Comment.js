@@ -3,9 +3,14 @@ import { Media } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import styles from "../../styles/Comment.module.css";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+
 
 const Comment = (props) => {
   const { profile_id, profile_image, owner, updated_at, content } = props;
+
+  const currentUser = useCurrentUser();
+  const is_owner = currentUser?.username === owner;
 
   return (
     <div>
