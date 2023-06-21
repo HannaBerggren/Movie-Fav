@@ -17,7 +17,7 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 
-import { useHistory } from "react-router";
+import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
 function PostEditForm() {
@@ -32,6 +32,7 @@ function PostEditForm() {
 
   const imageInput = useRef(null);
   const history = useHistory();
+  const { id } = useParams();
 
 
   const handleChange = (event) => {
