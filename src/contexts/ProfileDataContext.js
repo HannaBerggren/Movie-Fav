@@ -13,3 +13,12 @@ export const ProfileDataProvider = ({ children }) => {
     popularProfiles: { results: [] },
   });
 
+  return (
+    <ProfileDataContext.Provider value={profileData}>
+      <SetProfileDataContext.Provider value={setProfileData}>
+        {children}
+      </SetProfileDataContext.Provider>
+    </ProfileDataContext.Provider>
+  );
+};
+
