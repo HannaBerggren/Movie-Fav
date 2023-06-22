@@ -33,7 +33,11 @@ const PopularProfiles =() => {
 
   return (
     <Container className={appStyles.Content}>
-      <p>Most Followed Profiles!</p>  
+      <p>Most Followed Profiles!</p>
+      {popularProfiles.results.map((profile) => (
+         <p key={profile.id}>{profile.owner}</p>
+      ))}
+
     </Container>
   );  
 };
