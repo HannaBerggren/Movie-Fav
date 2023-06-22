@@ -8,6 +8,7 @@ const PopularProfiles =() => {
     pageProfile: { results: [] },
     popularProfiles: { results: [] },
   });
+  const { popularProfiles } = profileData;
 
   return (
     <Container className={appStyles.Content}>
