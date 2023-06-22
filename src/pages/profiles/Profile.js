@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "../../styles/Profile.module.css";
+import Avatar from "../../components/Avatar";
 import btnStyles from "../../styles/Button.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link } from "react-router-dom";
-import Avatar from "../../components/Avatar";
+import styles from "../../styles/Profile.module.css";
 import { Button } from "react-bootstrap";
 
 const Profile = (props) => {
