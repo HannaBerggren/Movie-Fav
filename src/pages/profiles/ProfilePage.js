@@ -26,7 +26,8 @@ function ProfilePage() {
   const { id } = useParams();
   const setProfileData = useSetProfileData();
   const { pageProfile } = useProfileData();
-  const [ profile ] = pageProfile.results;  
+  const [ profile ] = pageProfile.results;
+  const is_owner = currentUser?.username === profile?.owner; 
 
   useEffect(() => {
     const fetchData = async () => {
