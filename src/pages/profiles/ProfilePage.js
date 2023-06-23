@@ -63,7 +63,15 @@ function ProfilePage() {
             <div>{profile?.posts_count}</div>
           <div>posts</div>
         </Col>
-        </Row>
+        <Col xs={3} className="my-2">
+              <div>{profile?.followers_count}</div>
+              <div>followers</div>
+            </Col>
+            <Col xs={3} className="my-2">
+              <div>{profile?.following_count}</div>
+              <div>following</div>
+            </Col>
+          </Row>
         </Col>
         <Col lg={3} className="text-lg-right">
         <p>Follow button</p>
