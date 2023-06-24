@@ -16,6 +16,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
+import PopularProfiles from "../profiles/PopularProfiles";
 
 function PostPage() {
   const { id } = useParams();
@@ -46,7 +47,7 @@ function PostPage() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <p>Popular profiles for mobile</p>
+        <Popular profiles for mobile />
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className={appStyles.Content}>
           {currentUser ? (
@@ -62,19 +63,19 @@ function PostPage() {
           ) : null}
           {comments.results.length ? (
             <InfiniteScroll
-            children={comments.results.map((comment) => (
-              <Comment
-                key={comment.id}
-                {...comment}
-                setPost={setPost}
-                setComments={setComments}
-              />
-            ))}
-            dataLength={comments.results.length}
-            loader={<Asset spinner />}
-            hasMore={!!comments.next}
-            next={() => fetchMoreData(comments, setComments)}
-          />
+              children={comments.results.map((comment) => (
+                <Comment
+                  key={comment.id}
+                  {...comment}
+                  setPost={setPost}
+                  setComments={setComments}
+                />
+              ))}
+              dataLength={comments.results.length}
+              loader={<Asset spinner />}
+              hasMore={!!comments.next}
+              next={() => fetchMoreData(comments, setComments)}
+            />
           ) : currentUser ? (
             <span>No comments yet, be the first to comment!</span>
           ) : (
@@ -83,7 +84,7 @@ function PostPage() {
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        Popular profiles for desktop
+        <Popular profiles for desktop />
       </Col>
     </Row>
   );
