@@ -14,7 +14,7 @@ import PopularProfiles from "./PopularProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
-import { 
+import {
   useProfileData, 
   useSetProfileData, 
 } from "../../contexts/ProfileDataContext";
@@ -29,25 +29,26 @@ function ProfilePage() {
   const [profilePosts, setProfilePosts] = useState({ results: [] });
   const currentUser = useCurrentUser();
   const { id } = useParams();
-  const {setProfileData, handleFollow} = useSetProfileData();
+  const { setProfileData, handleFollow, handleUnfollow } = useSetProfileData();
   const { pageProfile } = useProfileData();
-  const [ profile ] = pageProfile.results;
-  const is_owner = currentUser?.username === profile?.owner; 
+  const [profile] = pageProfile.results;
+  const is_owner = currentUser?.username === profile?.owner;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [{ data: pageProfile}, { data: profilePosts }] = await Promise.all([
-          axiosReq.get(`/profiles/${id}/`),
-          axiosReq.get(`/posts/?owner__profile=${id}`),
-        ]);
+        const [{ data: pageProfile }, { data: profilePosts }] = 
+          await Promise.all([
+            axiosReq.get(`/profiles/${id}/`),
+            axiosReq.get(`/posts/?owner__profile=${id}`),
+          ]);
         setProfileData((prevState) => ({
           ...prevState,
-          pageProfile: {results: [pageProfile]},
+          pageProfile: { results: [pageProfile]},
         }));
         setProfilePosts(profilePosts);
         setHasLoaded(true);
-      } catch(err){
+      } catch (err) {
         console.log(err);
       }
     };
@@ -72,9 +73,9 @@ function ProfilePage() {
           <div>posts</div>
         </Col>
         <Col xs={3} className="my-2">
-              <div>{profile?.followers_count}</div>
-              <div>followers</div>
-            </Col>
+          <div>{profile?.followers_count}</div>
+            <div>followers</div>
+          </Col>
             <Col xs={3} className="my-2">
               <div>{profile?.following_count}</div>
               <div>following</div>
@@ -87,7 +88,7 @@ function ProfilePage() {
             (profile?.following_id ? (
               <Button
                 className={`${btnStyles.Button} ${btnStyles.BlackOutline}`}
-                onClick={() => {}}
+                onClick={() => handleUnfollow(profile)}
               >
                 Unfollow
               </Button>
