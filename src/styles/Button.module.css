@@ -7,7 +7,7 @@
   margin-left: 2px;
   margin-right: 2px;
   min-width: 75px;
-  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .Button:hover {
@@ -49,8 +49,8 @@
 
 .Black,
 .BlackOutline:hover {
-  /* background-color: #242a3d;
-  color: white; */
+  /* background-color: #D1AAF1;
+  color:black; */
   background-color: #D1AAF1;
   color: black;
   letter-spacing: 0.5px;
@@ -58,8 +58,8 @@
 
 .Black:hover,
 .BlackOutline {
-  /* background-color: #dadadf;
-  color: #242a3d;
+  /* background-color: #2ed9ff;
+  color: black;
   border-color: #242a3d; */
   background-color: #2ed9ff;
   color: black;
@@ -68,6 +68,5 @@
 .Bright {
   background-color: #2ed9ff;
   color: #591C68;
-  font-weight: bolder;
   letter-spacing: 1px;
 }
