@@ -357,4 +357,4 @@ I removed the functionality from the profile page, and continued testing and loo
 
 I have reported this issue to Tutor Support, and requested help from Student Care, but since no-one has got back to me yet, I will have to now submit my project as it is, leaving this bug unresolved for now. 
 
-Please click [**_here_**](README.md) to return to the Happening README file.
+Please click [**_here_**](README.md) to return to the Movie Fav README file.
