@@ -32,7 +32,7 @@ No errors or warnings were found when the deployed Happening URL was passed thro
 
 After resolving the errors caused where files, by default, had react imported but not used, only 9 errors regarding the testing files, so I have left these, and subsequently uninstalled ES Lint as it was causing conflicts with the dependency tree. 
 
-![ES Lint](images/eslint-results.png)
+![ES Lint](images/)
 
 
 ## Automatic Testing
@@ -256,7 +256,6 @@ Solution: I have reduced the font-size of the url text fields as no-one really n
 Happening was tested on the following browsers:
 
 - Google Chrome
-- Microsoft Edge
 - Mozilla Firefox
 
 I do not have any Apple devices available to carry out testing on a Safari browser. Appearance and functionality appear to be consistent throughout all browsers. The site loads correctly on Firefox but it doesn't seem to be able to connect with the backend API and get the data. This is something I need to look at for the future to make sure that Firefox users can view my site.
@@ -279,7 +278,7 @@ In addition to the above tests, I asked my peers to create a profile and interac
 
 1. Having run the ESLint program from, the report came out with 40 errors, but no warnings. 
 
-![EsLint Errors](images/eslint-errors.jpg)
+![EsLint Errors](images/eslint)
 
 The majority of the errors were caused due to the automatic import of 'react' into each js file, where in many in the end it is not used. I removed all of these imports, which left 9 errrors remaining. These 9 errors were caused by undefined variables in the jest test files, which I am ignoring as they are only test files. 
 

@@ -196,7 +196,7 @@ If the user tries a url that dont exist on Movie Fav, they are redirected to a `
 These are a few examples of features that would increase the user experience for Movie Fav that I would like to implement in the future.
 
 ### Jumbotron
-It would be nice to welcome the user with a short summery of the page
+It would be nice to welcome the user with a short summery of the page.
 
 ### Profile image upload on sign up
 User can add a profile image when signing up to Movie Fav, instead of adding one after signing in the first time. 
