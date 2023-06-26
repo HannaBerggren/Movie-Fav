@@ -56,7 +56,7 @@ The objective of this project and website was to create a fifth portfolio submis
 
 I've chosen to create a project aimed toward my own interests to find inspiration, and chose to create a social networking website targeted towards movie and series. 
 
-**The project is partly based on the Code Institute Moments course material**, using some of the code provided there, with additional functionality and styling added by me. 
+**The project is partly based on the Code Institute Moments course material**, using some of the code provided there, with additional styling added by me. 
 
 ## Site user goal
 Users of Movie Fav could have several goals, such as wanting to share and take part of movie posts, networking through the comments and follow content pandering to their interests. Users can also use Movie Fav to get inspired, get tips of what has been missed in the film and series world.
@@ -66,21 +66,22 @@ As a site owner the goal is to provide a stable and enjoyable user experience, t
 
 # Project management
 
-## Github project board, user stories, issues and milestones
-Movie Fav was developed using an agile methodology, using Github issues, milestones and projectboard to track tasks during the project.
-
-GitHub project board and issues played a significant role in this process, allowing for the creation of user stories and their organization in the to-do, in progress and done sections. As work began, these tasks were moved from the to-do section, to the in-progress section and later to the done section when completed, providing an efficient way to track progress and manage tasks.
+## Github project board, user stories, issues and database diagram
+Movie Fav was developed using an agile methodology, using Github issues to track tasks during the project.
 
 Movie Fav consists of a number of user stories, labeled to keep them easily organized.
 
 - [User stories](https://github.com/HannaBerggren/Movie-Fav/issues)
+- [Project Board](https://github.com/users/HannaBerggren/projects/7)
+
+### Database Diagram
+![Database Diagram](src/assets/databasediagram.png)
 
 
 ## Wireframes
 Wireframes created using [Balsamiq](https://balsamiq.com/) to plan the general flow and display of Movie Fav. Some differences may be found between the original wireframes and the finished site due to design choices made during the project process.
 
-- [Home page](src/assets/)
-- [Profile](src/assets/)
+![Home page](src/assets/wireframes.png)
 
 # Typography and color scheme
 
@@ -100,7 +101,7 @@ Images are imported from [Google](https://www.google.com/). No result image is i
 ## Existing features
 
 ### Navbar
-Movie Fav feature a navbar that is present on all pages of the site. The navbar links change depending on wether the user is signed in or not, giving the user access to different features of the site. If the user is not signed in, the navbar show links to the sign in or sign up pages. If a user is signed in the navbar shows the users profile avatar image (linking to the users profile), Home, Feed, Liked, and Sign out. The navbar also feature the Movie Fav logo. 
+Movie Fav feature a navbar that is present on all pages of the site. The navbar links change depending on wether the user is signed in or not, giving the user access to different features of the site. If the user is not signed in, the navbar show links to the sign in or sign up pages. If a user is signed in the navbar shows the users profile avatar image (linking to the users profile). The navbar also feature the Movie Fav logo. 
 
 ![Navbar signed out](src/assets/navbarlogout.png)
 ![Navbar signed in](src/assets/navbarsignedin.png)
@@ -133,38 +134,38 @@ Clicking on the comments icon will redirect the user to a detailed view of the p
 ![Feed](src/assets/feed.png)
 
 ### Add a post
-Users can add a new post through a form, with title, notes and an image. The post is displayed in the post feed and in the users profile post feed.
+Users can add a new post through a form, with title, content and an image. The post is displayed in the post feed and in the users profile post feed.
 The cancel button redirects the user back to the previous page and no post is made.
 
 ![Post form](src/assets/addpost.png)
 
 ### Popular profiles
-The popular profile section features the users with the most followers, to let other users easily find new interesting content. This section is responsive, displaying differently on large and smaller screens. Clicking the `Follow` button saved the posts by that user in the `Followed` section.
+The popular profile section features the users with the most followers, to let other users easily find new interesting content. This section is responsive, displaying differently on large and smaller screens. Clicking the `Follow` button saves the posts by that user in the `Followed` section.
 
-![Popular profiles mobile](src/assets/)
+![Popular profiles mobile](src/assets/popularmobile.png)
 
-![Popular profiles](src/assets/)
+![Popular profiles](src/assets/popular.png)
 
 ### Follow - Followed
 By clicking the `Follow` button, either in the Popular profiles section or in a users profile bio will let users follow each others content, having the followed users posts display on the Followed page. Clicking `Unfollow` will let users stop following a user and remove their posts from the Following feed.
 
 The amounts of followers and following for a user can be seen in their profile bio. 
 
-![Follow](src/assets/)
+![Follow](src/assets/follow.png)
 
 ### Searchbar
-Following profiles and found different objects feature a searchbar for easy navigation. If no match to searchquery can be found a No results image and message is displayed. 
+Following profiles and find different objects feature a searchbar for easy navigation. If no match to searchquery can be found a No results image and message is displayed. 
 
-![Searchbar](src/assets/)
-![No result found](src/)
+![Searchbar](src/assets/searchbar.png)
+![No result found](src/assets/noresults.png)
 
 ### Profile page
 Clicking the avatar image or username in the navbar redirects the user to their own profile page. Here they can view all their own posts, add a bio and profile image, see how many posts they've made, how many other users they are following and how many are following them. Clicking the dropdown menu lets the user edit their username, password and bio. 
 
 If a user tries to edit their username to an already existing one they will be notified of this. If they try to change their password to an invalid one they will be notified of this. 
 
-![Bio](src/assets/)
-![Bio edit](src/assets/)
+![Bio](src/assets/bio.png)
+![Bio edit](src/assets/biomessage.png)
 
 ### Like - Liked entries
 By clicking the heart icon on a diary post a user can like the post, increasing the likes count on a post. The post is also saved to the Liked entries feed, so that users can find and read their favorite entries again. 
@@ -172,25 +173,24 @@ By clicking the heart icon again the likes count is decreased and the post is  r
 
 User can not like their own post, and are notified if they try to click the heart icon on their own post. 
 
-![No likes](src/assets/)
-![Liked](src/assets/)
-![Like message](src/assets/)
+![No likes](src/assets/nolikes.png)
+![Liked](src/assets/liked.png)
+![Like message](src/assets/likemessage.png)
 
 ### Comments
 Users can comment on posts through the commentfield. When posting a comment the comments count on the post is increased, and decreased if a user deletes their comment.
 
 Only the user who posted the comment can edit or delete it.
 
-![No comments](src/assets/)
-![Commented](src/assets/)
-![Commentfield](src/assets/)
-![Comment edit](src/assets/)
+![No comments](src/assets/nocomments.png)
+![Commented](src/assets/commented.png)
+![Comment edit](src/assets/commentedit.png)
 
 
 ### Page not found
 If the user tries a url that dont exist on Movie Fav, they are redirected to a `Page not found`, which let them redirect back to the home page. 
 
-![Page not found](src/assets)
+![Page not found](src/assets/pagenotfound.png)
 
 ## Future features
 These are a few examples of features that would increase the user experience for Movie Fav that I would like to implement in the future.
@@ -202,7 +202,7 @@ It would be nice to welcome the user with a short summery of the page
 User can add a profile image when signing up to Movie Fav, instead of adding one after signing in the first time. 
 
 ### Post owner can delete comments on their posts
-User can delete unwanted comments by other users on their diary entries. 
+User can delete unwanted comments by other users on their posts. 
 
 ## Responsive
 Movie Fav is fully responsive for all screen sizes. 
@@ -256,7 +256,7 @@ Movie Fav have been continualy tested manually troughout development and after d
 # Code validation
 
 ## Browser test
-Movie Fav have been tested in Chrome, Edge and Firefox with no errors found in functionality.
+Movie Fav have been tested in Chrome and Firefox with no errors found in functionality.
 
 ### JSX
 JSX code have been manually validated and adjusted throughout development via direct feedback from npm in the terminal. 
