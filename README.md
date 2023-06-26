@@ -130,7 +130,7 @@ Users posts are displayed in the post feed on the home page, sorted by latest po
 
 Clicking on the comments icon will redirect the user to a detailed view of the post and it's commentfield. 
 
-![Feed](src/assets/)
+![Feed](src/assets/feed.png)
 
 ### Add a post
 Users can add a new post through a form, with title, notes and an image. The post is displayed in the post feed and in the users profile post feed.
@@ -188,7 +188,7 @@ Only the user who posted the comment can edit or delete it.
 
 
 ### Page not found
-If the user tries a url that dont exist on Garden Diaries, they are redirected to a `Page not found`, which let them redirect back to the home page. 
+If the user tries a url that dont exist on Movie Fav, they are redirected to a `Page not found`, which let them redirect back to the home page. 
 
 ![Page not found](src/assets)
 
