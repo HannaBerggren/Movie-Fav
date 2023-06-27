@@ -1,19 +1,17 @@
 # Movie Fav
 
-## Milestone project 5 
-
 Movie Fav is an social network platform specially designed for people who like movies and series. With it's user-friendly interface, Movie Fav offers a nice space for users to document and share their thoughts of movies, series and everything around, which is shown with pictures and words.
 
 In addition to sharing their interest, users can actively engage with the community by liking and commenting on posts. Movie Fav provides a user-friendly "follow" feature, enabling users to effortless stay connected with their favorite content creators.
 
-In summary, Move Fav is a platform that seamlessly integrates social networking and film enthusiasts.
+In summary, Move Fav is a platform that integrates social networking with movie enthusiasts.
 
-Movie Fav is a fictional website created as a milestone project for Code Institutes fullstack developer course. 
+Movie Fav is a fictional website created as a milestone project 5 for Code Institutes fullstack developer course. 
 
-![Movie Fav main image](src/assets/mainimage.png)
+![Movie Fav main image](src/assets/mainimage1.png)
 
 ## Live website
-View live website here: [Movie Fav](https://.herokuapp.com/)
+View live website here: [Movie Fav](https://moviefav-1a8485e84849.herokuapp.com/)
 
 ## Table of contents
 
@@ -24,7 +22,7 @@ View live website here: [Movie Fav](https://.herokuapp.com/)
     - [Site user goal](#site-user-goal)
     - [Site owner goal](#site-owner-goal)
 - [Project management](#project-management)
-    - [Github project board, user stories, issues and milestones](#github-project-board-user-stories-issues-and-milestones)
+    - [Github project board, user stories, issues and milestones](#github-project-board-user-stories-issues-and-database-diagram)
     - [Wireframes](#wireframes)
 - [Typography and color scheme](#typography-and-color-scheme)
     - [Typography](#typography)
@@ -59,10 +57,10 @@ I've chosen to create a project aimed toward my own interests to find inspiratio
 **The project is partly based on the Code Institute Moments course material**, using some of the code provided there, with additional styling added by me. 
 
 ## Site user goal
-Users of Movie Fav could have several goals, such as wanting to share and take part of movie posts, networking through the comments and follow content pandering to their interests. Users can also use Movie Fav to get inspired, get tips of what has been missed in the film and series world.
+Users of Movie Fav could have several goals, such as wanting to share and take part of movie posts, networking through the comments and follow content pandering to their interests. Users can also use Movie Fav to get inspired and get tips of what has been missed in the film and series world.
 
 ## Site owner goal
-As a site owner the goal is to provide a stable and enjoyable user experience, that encourages user interaction. The website should be accessible, appealing and contain content that is well structured, intuitive and of high standard. Site administrator should make sure the content is monitored to meet community standard.
+As a site owner the goal is to provide a enjoyable user experience, that encourages user interaction. The website should be accessible and appealing and contain content that is well structured with high standard. Site administrator should make sure the content is monitored to meet community standard.
 
 # Project management
 
@@ -71,12 +69,12 @@ Movie Fav was developed using an agile methodology, using Github issues to track
 
 Movie Fav consists of a number of user stories, labeled to keep them easily organized.
 
-- [User stories](https://github.com/HannaBerggren/Movie-Fav/issues)
-- [Project Board](https://github.com/users/HannaBerggren/projects/7)
+- [User Stories](https://github.com/HannaBerggren/Movie-Fav/issues)
+- [Project Board](https://github.com/users/HannaBerggren/projects/7/views/1)
 
 ### Database Diagram
+The relationship between all of the models.
 ![Database Diagram](src/assets/databasediagram.png)
-
 
 ## Wireframes
 Wireframes created using [Balsamiq](https://balsamiq.com/) to plan the general flow and display of Movie Fav. Some differences may be found between the original wireframes and the finished site due to design choices made during the project process.
@@ -86,7 +84,7 @@ Wireframes created using [Balsamiq](https://balsamiq.com/) to plan the general f
 # Typography and color scheme
 
 ## Typography
-Font used throughout the website is Karla with Lato for backup imported from [Google fonts](https://fonts.google.com/).
+Font used throughout the website is Karla with Lato for backup, imported from [Google fonts](https://fonts.google.com/?query=Karla).
 
 ## Color scheme
 Color scheme is design to suit all ages and a mix of blue, purple and pink shades to match the project's logo.
@@ -101,7 +99,7 @@ Images are imported from [Google](https://www.google.com/). No result image is i
 ## Existing features
 
 ### Navbar
-Movie Fav feature a navbar that is present on all pages of the site. The navbar links change depending on wether the user is signed in or not, giving the user access to different features of the site. If the user is not signed in, the navbar show links to the sign in or sign up pages. If a user is signed in the navbar shows the users profile avatar image (linking to the users profile). The navbar also feature the Movie Fav logo. 
+Movie Fav feature a navbar that is present on all pages of the site. The navbar links change depending on wether the user is signed in or not, giving the user access to different features of the site. If the user is not signed in, the navbar show links to the sign in or sign up pages. If a user is signed in, the navbar shows the users profile avatar image (linking to the users profile). The navbar also feature the Movie Fav logo. 
 
 ![Navbar signed out](src/assets/navbarlogout.png)
 ![Navbar signed in](src/assets/navbarsignedin.png)
@@ -109,7 +107,7 @@ Movie Fav feature a navbar that is present on all pages of the site. The navbar 
 ### Sign up
 To sign up to Movie Fav the user will need to fill out a form with preferred username and password. After submitting the form with valid data they are redirected to the sign in page. The page features a link to the sign in page, if the user is already signed up with Movie Fav. 
 
-If the user tries to submit an invalid form (already existing username, password too short or similar to username, missed to fill out a field) they are notified through a message and asked to correct their submission. 
+If the user tries to submit an invalid form (already existing username, password too short or similar to username, missed to fill out a field) they are notified by a message to correct their submission. 
 
 ![Sign up](src/assets/signup.png)
 
@@ -119,7 +117,7 @@ If the user tries to submit an invalid form (already existing username, password
 
 After signing up with Movie Fav a user can sign in by filling out the sign in form. When submitting a valid form they are redirected to the home page. 
 
-If the user tries to submit an invalid form (wrong username or password, blank field) they are notified through a message and asked to correct their submission. 
+If the user tries to submit an invalid form (wrong username or password, blank field) they are notified by a message to correct their submission. 
 
 ![Sign in](src/assets/signin.png)
 
@@ -127,7 +125,7 @@ If the user tries to submit an invalid form (wrong username or password, blank f
 
 
 ### Post feed
-Users posts are displayed in the post feed on the home page, sorted by latest posts by all users. The feed features infinite scrolling, as long as there is content the user can scroll further. 
+Users posts are displayed in the post feed on the home page, sorted by latest posts by all users. The feed features infinite scrolling, as long as there is content, the user can scroll further down. 
 
 Clicking on the comments icon will redirect the user to a detailed view of the post and it's commentfield. 
 
@@ -140,7 +138,7 @@ The cancel button redirects the user back to the previous page and no post is ma
 ![Post form](src/assets/addpost.png)
 
 ### Popular profiles
-The popular profile section features the users with the most followers, to let other users easily find new interesting content. This section is responsive, displaying differently on large and smaller screens. Clicking the `Follow` button saves the posts by that user in the `Followed` section.
+The popular profile section features the users with most followers, to let other users easily find new interesting content. This section is responsive, displaying differently on large and smaller screens. Clicking the `Follow` button saves the posts by that user in the `Followed` section.
 
 ![Popular profiles mobile](src/assets/popularmobile.png)
 
@@ -154,22 +152,21 @@ The amounts of followers and following for a user can be seen in their profile b
 ![Follow](src/assets/follow.png)
 
 ### Searchbar
-Following profiles and find different objects feature a searchbar for easy navigation. If no match to searchquery can be found a No results image and message is displayed. 
+Following profiles and find different objects feature a searchbar for easy navigation. If no match to searchquery can be found, a No results image and a message is displayed. 
 
 ![Searchbar](src/assets/searchbar.png)
 ![No result found](src/assets/noresults.png)
 
 ### Profile page
-Clicking the avatar image or username in the navbar redirects the user to their own profile page. Here they can view all their own posts, add a bio and profile image, see how many posts they've made, how many other users they are following and how many are following them. Clicking the dropdown menu lets the user edit their username, password and bio. 
+Clicking the avatar image or username in the navbar redirects the user to their own profile page. Here they can view all their own posts, add a bio and profile image, see how many posts they've made, how many users they follow and how many follow them. If you click on the dropdown menu, the user can edit their username, password and bio. 
 
-If a user tries to edit their username to an already existing one they will be notified of this. If they try to change their password to an invalid one they will be notified of this. 
+If a user tries to edit their username to an already existing one they will be notified. If they try to change their password to an invalid one they will be notified. 
 
 ![Bio](src/assets/bio.png)
 ![Bio edit](src/assets/biomessage.png)
 
 ### Like - Liked entries
-By clicking the heart icon on a diary post a user can like the post, increasing the likes count on a post. The post is also saved to the Liked entries feed, so that users can find and read their favorite entries again. 
-By clicking the heart icon again the likes count is decreased and the post is  removed from the Liked entries feed. 
+By clicking the heart icon on a post a user can like the post or click again to undo.
 
 User can not like their own post, and are notified if they try to click the heart icon on their own post. 
 
@@ -188,9 +185,9 @@ Only the user who posted the comment can edit or delete it.
 
 
 ### Page not found
-If the user tries a url that dont exist on Movie Fav, they are redirected to a `Page not found`, which let them redirect back to the home page. 
+If the user tries a url that dont exist on Movie Fav, they are redirected to a `Page not found`, which let them redirect back to the homepage. 
 
-![Page not found](src/assets/pagenotfound.png)
+![Page not found](src/assets/pagenotfound1.png)
 
 ## Future features
 These are a few examples of features that would increase the user experience for Movie Fav that I would like to implement in the future.
@@ -246,7 +243,7 @@ Aside from the hooks included in the React library, Movie Fav contain two unique
 ## Automated tests
 For this project I decided to focus on writing some automated tests for the NavBar component
 
-Tests are written using React testing library MSW. All tests can be found **[here](src/components/__tests__)**. Server setup can be found **[here](src/setupTests.js)**.
+Tests are written using React testing library MSW. All tests can be found **[here](src/components/__tests__/)**. Server setup can be found **[here](src/setupTests.js)**.
 
 All automated tests have been run with npm and passed. 
 
@@ -265,11 +262,10 @@ JSX code have been manually validated and adjusted throughout development via di
 CSS and React bootstrap code have been manually validated and adjusted throughout development via direct feedback from npm in the terminal. 
 
 ## Lighthouse
-Movie Fav have been tested using Chrome developer Lighthouse tester. Performance was quite impacted by large image sizes on all screen sizes, for signed in users, due to both post feed and profile avatars displaying. Performance was not impacted by the same issue on small and medium screens when signed out, due to profile avatar images not displaying for signed out users on these screen sizes. 
+Movie Fav have been tested using Chrome developer Lighthouse tester. Performance was quite impacted by large image sizes on all screen sizes, for signed in users, due to both post feed and profile avatars displaying. Performance was not impacted by the same issue on small and medium screens when signed out, because of the profile avatar images not displaying for signed out users on these screen sizes. 
 
-To fix this in the future a library like **Workbox** could be implemented for caching images.
 
-![Lighthouse]()
+![Lighthouse](src/assets/lighthouse.png)
 
 # Bugs
 Not that I'm aware about
@@ -304,10 +300,10 @@ I created a repository in Github, named it ´movie fav´, and I used the templat
 - [Heroku](https://heroku.com/)
 - [React bootstrap](https://react-bootstrap-v4.netlify.app/)
 - [W3Schools](https://www.w3schools.com/)
-- [Stackoverflow] (https://stackoverflow.com/)
+- [Stackoverflow](https://stackoverflow.com/)
 - [Cloudinary](https://cloudinary.com/)
 - [Lucidchart](https://www.lucidchart.com/)
-- [DrawSQL] (https://drawsql.app/)
+- [DrawSQL](https://drawsql.app/)
 - [Google fonts](https://fonts.google.com/)
 - [React documentation](https://react.dev/)
 - [Get bootstrap](https://getbootstrap.com/)
@@ -315,9 +311,9 @@ I created a repository in Github, named it ´movie fav´, and I used the templat
 - [Flaticon](https://www.flaticon.com/)
 - [Favicon generator](https://www.favicon-generator.org/)
 - [Balsamiq](https://balsamiq.com/)
-- [Iloveimg] (https://www.iloveimg.com/)
-- [Coolors] (https://coolors.co/)
-- [Looka] (https://looka.com/)
+- [Iloveimg](https://www.iloveimg.com/)
+- [Coolors](https://coolors.co/)
+- [Looka](https://looka.com/)
 - [Font awesome](https://fontawesome.com/)
 
 
